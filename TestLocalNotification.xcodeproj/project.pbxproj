@@ -13,6 +13,8 @@
 		090CA22022A101FD006C3C42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 090CA21F22A101FD006C3C42 /* Assets.xcassets */; };
 		090CA22322A101FD006C3C42 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 090CA22122A101FD006C3C42 /* LaunchScreen.storyboard */; };
 		090CA22622A101FD006C3C42 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 090CA22522A101FD006C3C42 /* main.m */; };
+		090CA22D22A11582006C3C42 /* bing.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 090CA22C22A11582006C3C42 /* bing.mp3 */; };
+		090CA22F22A1173C006C3C42 /* apple.png in Resources */ = {isa = PBXBuildFile; fileRef = 090CA22E22A1173C006C3C42 /* apple.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		090CA22222A101FD006C3C42 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		090CA22422A101FD006C3C42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		090CA22522A101FD006C3C42 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		090CA22C22A11582006C3C42 /* bing.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bing.mp3; sourceTree = "<group>"; };
+		090CA22E22A1173C006C3C42 /* apple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = apple.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,8 @@
 		090CA21522A101FB006C3C42 /* TestLocalNotification */ = {
 			isa = PBXGroup;
 			children = (
+				090CA22C22A11582006C3C42 /* bing.mp3 */,
+				090CA22E22A1173C006C3C42 /* apple.png */,
 				090CA21622A101FB006C3C42 /* AppDelegate.h */,
 				090CA21722A101FB006C3C42 /* AppDelegate.m */,
 				090CA21922A101FB006C3C42 /* ViewController.h */,
@@ -130,7 +136,9 @@
 			files = (
 				090CA22322A101FD006C3C42 /* LaunchScreen.storyboard in Resources */,
 				090CA22022A101FD006C3C42 /* Assets.xcassets in Resources */,
+				090CA22D22A11582006C3C42 /* bing.mp3 in Resources */,
 				090CA21E22A101FB006C3C42 /* Main.storyboard in Resources */,
+				090CA22F22A1173C006C3C42 /* apple.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,7 +294,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JS335ZH9T8;
 				INFOPLIST_FILE = TestLocalNotification/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,7 +312,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = JS335ZH9T8;
 				INFOPLIST_FILE = TestLocalNotification/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

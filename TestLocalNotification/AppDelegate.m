@@ -8,7 +8,9 @@
 
 #import "AppDelegate.h"
 
-@interface AppDelegate ()
+#import <UserNotifications/UserNotifications.h>
+
+@interface AppDelegate () <UNUserNotificationCenterDelegate>
 
 @end
 
@@ -17,6 +19,20 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [[UNUserNotificationCenter currentNotificationCenter] requestAuthorizationWithOptions:UNAuthorizationOptionSound | UNAuthorizationOptionBadge | UNAuthorizationOptionAlert completionHandler:^(BOOL granted, NSError * _Nullable error) {
+        if (error) {
+            NSLog(@"error:%@",error.localizedDescription);
+        } else {
+            if (granted) {
+                NSLog(@"授权成功");
+            } else {
+                NSLog(@"拒绝授权");
+            }
+        }
+    }];
+    
+    [UNUserNotificationCenter currentNotificationCenter].delegate = self;
+    
     return YES;
 }
 
@@ -47,5 +63,16 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+//前台接收推送会调用这个方法,completionHandler设置推送显示的方式
+- (void)userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions))completionHandler {
+    NSLog(@"willPresentNotification");
+    completionHandler(UNNotificationPresentationOptionAlert | UNNotificationPresentationOptionSound);
+}
+
+//点击推送调用的方法
+- (void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)(void))completionHandler {
+    NSLog(@"didReceiveNotificationResponse:%@",response.notification.request.content.userInfo);
+    
+}
 
 @end
